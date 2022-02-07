@@ -12,5 +12,5 @@
 ## Docs 
 ###  [Postman Collection](https://github.com/AlaaProg/book-api/blob/master/Book%20Api.postman_collection.json)
 1) open postman 
-2) field > import > select  `file Book Apipostman_collection.json`
+2) menu bar > file > import > select  `file Book Apipostman_collection.json`
 3) injoy
