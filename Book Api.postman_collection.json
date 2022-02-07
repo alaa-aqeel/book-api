@@ -1,0 +1,1412 @@
+{
+	"info": {
+		"_postman_id": "861e739a-76a9-4da8-a6d1-1c39cb4710f6",
+		"name": "Book Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Update user by id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "ahmed.admin@email.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "Ahmed aqeel",
+											"type": "text"
+										},
+										{
+											"key": "is_admin",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/user/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create user",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "alaa.0.admin@email.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "alaa.admin.12345",
+											"type": "default"
+										},
+										{
+											"key": "fullname",
+											"value": "Alaa Admin ",
+											"type": "default"
+										},
+										{
+											"key": "is_admin",
+											"value": "1",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/user",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get users",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "ali aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/user?query=&limit=5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"user"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": ""
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get user by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "ali aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/user/89",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"user",
+										"89"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Books",
+					"item": [
+						{
+							"name": "Update user by id",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Long way",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "link",
+											"value": "http://book.com/book/1222131222",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "language",
+											"value": "arabic",
+											"type": "default"
+										},
+										{
+											"key": "section",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "description",
+											"value": "This is a Long way",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "author",
+											"value": "ali ahemd",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "pages",
+											"value": "350",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/SKYLINE COMPUTER/Pictures/wallpaperflare.com_wallpaper(1).jpg",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/book/3?_method=PUT",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"book",
+										"3"
+									],
+									"query": [
+										{
+											"key": "_method",
+											"value": "PUT"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create book",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Long way",
+											"type": "default"
+										},
+										{
+											"key": "link",
+											"value": "http://book.com/book/1222131222",
+											"type": "default"
+										},
+										{
+											"key": "language",
+											"value": "arabic",
+											"type": "default"
+										},
+										{
+											"key": "section",
+											"value": "2",
+											"type": "default"
+										},
+										{
+											"key": "description",
+											"value": "This is a Long way",
+											"type": "default"
+										},
+										{
+											"key": "author",
+											"value": "ali ahemd",
+											"type": "default"
+										},
+										{
+											"key": "pages",
+											"value": "350",
+											"type": "default"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/SKYLINE COMPUTER/Pictures/wallpaperflare.com_wallpaper(1).jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/book",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"book"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get books",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "ali aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/book?name=&language=&author=",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"book"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": ""
+										},
+										{
+											"key": "language",
+											"value": ""
+										},
+										{
+											"key": "author",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get user by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "ali aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/book/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"book",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Section",
+					"item": [
+						{
+							"name": "Update section by id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "section 2",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/section/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"section",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create section",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "3 section 4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/section",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"section"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get sections",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "ali aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/section",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"section"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get section by id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "ali aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/admin/section/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"admin",
+										"section",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2YyOTNhNDI0NThiN2Q1YTgxNjUxZDY0M2YyNzUwYzFjZmZiNjAwNWY4Y2I2N2EyNjRjNzY5MGVhNWFlMWYzMDliNjAxMmZhZDFhZjYwYWEiLCJpYXQiOjE2NDQwODcxODMuNDQ0MTYsIm5iZiI6MTY0NDA4NzE4My40NDQxNjIsImV4cCI6MTY3NTYyMzE4My4zMjU4MzIsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.Eu2ueHsBoByGsdiLbfKeKuYBCxFxz-C4bkiR4Ke0o66FpRzsOpMutjWYvD3zHPURRIKdY_caMcipvNOtG4NWs70oyfujkL06hP7NgzVjjHmr0_wfBfAkIdPkZUgrAZRDLOOawOfjuUN5R1RgOQxmdgKwq0mS-xMShYjfN4Zu14vavVO6Qm0ROhdbnz7FXw2kp9cH21g3TgbXGrTb3Cu2Teioi4piB2RRvZVtfu7-E4Q-s-Rvjc__Pe8hZHenuc9gc_bK8JPsXk5oUCLU_kB6rp6OIAc-fxDhUD0bzoTLIMjaOswzBanrQQtOWYQZvIHOIg02fws0Mj135yEKaCFDAD0G7ksEnB3EaSuDEGuZ7U61Lf1FA6CKoWMnptYgelEufmHpK26PA4oMAJkmv_oe4_Gv2GTcgabslPjy3WaoCzmQs97ryK5D-f4x236LgbROUToNm_TL_gBU_tYWLD0KmUTkkAgwuQ-iyVE1cpzzGb0aVCa_6aYIY8suTIuE6IvnKYVlVTCbrKu9hwGIT0mteA-Sto44A6Ey26G7RqxKhf6Iwcf8g7X_APJ-GchJ35rNgqrZt03QONHpURB1R4MEUxSVKDQ1EPOkEjwwx2HaD5YsRcsmaIh3kUWyky95QQTxhd4OFiPG-ZPWAhU_0GJP2o8LC0-PlFI2JN_ZVpLl-Iw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ahmed.admin@email.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ali@email.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								},
+								{
+									"key": "fullname",
+									"value": "ali aqeel",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/auth/register",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Guest",
+			"item": [
+				{
+					"name": "Get books",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ali@email.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "fullname",
+									"value": "ali aqeel",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/book?name=&language=&author=",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"book"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "language",
+									"value": ""
+								},
+								{
+									"key": "author",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get books ratings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ali@email.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "fullname",
+									"value": "ali aqeel",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/book/3/rating",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"book",
+								"3",
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get book by",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ali@email.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "fullname",
+									"value": "ali aqeel",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/book/3",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"book",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Profile",
+					"item": [
+						{
+							"name": "Update Profile",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "Ahmmed aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/me/update",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"me",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get profile",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "ali aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/me/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"me",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rating",
+					"item": [
+						{
+							"name": "create rating for book",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "value",
+											"value": "1",
+											"type": "default"
+										},
+										{
+											"key": "comment",
+											"value": "best books ",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/book/3/rating",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"book",
+										"3",
+										"rating"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update rating for book by id",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "value",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "best books",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/book/3/rating/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"book",
+										"3",
+										"rating",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete rating for book by id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "value",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "best books",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/book/3/rating/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"book",
+										"3",
+										"rating",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all rating for book",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "Ahmmed aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/book/3/rating",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"book",
+										"3",
+										"rating"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Favoirte",
+					"item": [
+						{
+							"name": "add book to favorite",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "book",
+											"value": "2",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/me/favorite",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"me",
+										"favorite"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete book from favorite",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "value",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "comment",
+											"value": "best books",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/me/favorite/3",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"me",
+										"favorite",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get favorite books",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ali@email.com",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "fullname",
+											"value": "Ahmmed aqeel",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/me/favorite",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"me",
+										"favorite"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDc4Y2U4YTM1NTE1NzU0YjlkMzVkNTA5OGM2Yjk3ZDQ4MWM4Y2JmNzRiNDdiZDEyNDUyNTkwZTQwNjNkZTY2ZDg1MTE2ZmYxZjliNDJmNGIiLCJpYXQiOjE2NDQxOTk0MTcuODQ2MDMzLCJuYmYiOjE2NDQxOTk0MTcuODQ2MDM3LCJleHAiOjE2NzU3MzU0MTcuNzc5MjY4LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.ppOkg0ZlhQQ7tqFiiRqC9OvsA_ilu5BLUEf_QrInlZZ7hVTvtnaEhk8W65bf8x50vKrgIhNZO1Bvh20CjC3sWIxZef-dO02mknwZx-KDcFC9cvJ2GlIj5RYEXcsiBCBKeB6J7SPhTcp8WUK9vOzLXE5m1NIftv9oSwgL_aofdWDqosVsuphkx3Tel2B65prOpLmhYNyf2EE2ZLxDV5feW7yxWNaAm4eE38YfD5OF6LFMNF5e7tZD1SJWWxI5Z7gLobB1CpWRsP6MwUiDf2TW4z8dPzGFeE8oGFK9OR046EHd9IlkZVURFVp--m5V1XkunZaswXSfZw_CQOKyLoIj_U3Fyf1p1tzAflg5E4htp5mIpTDNbJTg9Za4nKhVECDg7OPeFM-wPRna3goNIiK2S9z8d0VKEPcpDL-gA2pRXKxvp4pIj7E7vQTYXyzasfNiwGMgFxy6zXDTF80exNFCg9FAjgxaiti5zlkONJDyzsL6QXFF26Ywxye21uOD3j2jLmoTU76rk7xV81ZehYccL5DLEZ7IX6NEqEeLzC6ng5iDET1nBzl8VaV4t5_MXKq1Jdtt99RHmXtnPdmmMhMGkPHS3oskjPemOQWAJXUCnU7yBMcO1vVU5eb8yAWFZAqtvRMROIE24f32FFoNE9kxc5RIPmxWDT60Q69pP0Vt1JA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://127.0.0.1:8000/api/v1",
+			"type": "default"
+		}
+	]
+}

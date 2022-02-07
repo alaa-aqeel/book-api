@@ -27,4 +27,17 @@ class Rating extends Model
         
         return $this->belongsTo(User::class);
     }
+
+
+    /**
+     * Many Ratings To One Book 
+     * 
+     * @return \Illuminate\Database\Eloquent\Model;
+     */    
+    public function book() 
+    {
+        
+        return $this->belongsTo(Book::class);
+    }
+    
 }

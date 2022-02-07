@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        // add passport guard
+        "api" => [
+            "driver" => "passport",
+            "provider" => "users"
+        ]
     ],
 
     /*

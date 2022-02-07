@@ -13,7 +13,7 @@ class BookRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return auth()->user()->is_admin;
     }
 
     /**
@@ -23,8 +23,29 @@ class BookRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
-        ];
+        switch($this->method()){
+            case 'POST':
+                return [
+                    "name" => "required|string|unique:books,name",
+                    "link" => "required|url",
+                    "image" => "required|image",
+                    "description" => "nullable",
+                    "language" => "required|string",
+                    "author" => "required|string",
+                    "pages" => "required|integer",
+                    "section" => "required|exists:sections,id",
+                ];
+            case "PUT":
+                return [
+                    "name" => "string|unique:books,name,".$this->book,
+                    "link" => "url",
+                    "image" => "image",
+                    "description" => "nullable",
+                    "language" => "string",
+                    "author" => "string",
+                    "pages" => "integer",
+                    "section" => "exists:sections,id",
+                ];
+        }
     }
 }
